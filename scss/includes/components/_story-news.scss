@@ -1,0 +1,110 @@
+.story-style-news {
+
+    margin-top: 2rem;
+
+    .news-wrapper {
+
+        display: flex;
+
+        .col-25:first-child {
+            padding-left: 0;
+        }
+        .col-25:last-child {
+            padding-right: 0;
+        }
+
+        .col-25 {
+
+            width: 25%;
+            padding: .4rem;
+
+            article {
+
+                position: relative;
+                height: 500px;
+                background: red;
+                border-radius: 10px;
+                transition: box-shadow .6s cubic-bezier(.165,.84,.44,1);
+
+                :hover img{
+                    transform: scale(1.02);
+                }
+
+                .entry-media-frame {
+                    hyphens: manual;
+                    display: block;
+                    position: relative;
+                    max-width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    transition: box-shadow .6s cubic-bezier(.165,.84,.44,1);
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-image: linear-gradient(212deg, rgba(0,0,0,0) 0, rgba(0, 0, 0, 0.79) 100%);
+                        border-radius: 10px;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+
+                        transform-origin: 0 0;
+                        transition: transform .25s, visibility .25s ease-in;
+                    }
+                }
+               
+
+                .entry-main {
+
+                    position: absolute;
+                    bottom: 15px;
+                    left: 30px;
+                    right: 30px;
+
+
+                    .entry-info {
+
+                        color: $white;
+                        display: flex;
+                        align-items: center;
+
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 15px;
+                        letter-spacing: -.2px;
+
+                        .entry-badge {
+                            border-radius: 5px;
+                            background-image: linear-gradient(180deg,rgba(128,128,128,.4) 0%,rgba(128,128,128,.4) 100%);
+                            padding: 5px 15px;
+                        }
+                        .entry-date {
+                            margin-left: 1rem;
+                        }
+                    }
+                    .entry-header {
+
+                        .entry-title {
+                            font-size: 22px;
+                            font-weight: 700;
+                            line-height: 27px;
+                            letter-spacing: -.3px;
+                            margin-top: 17px;
+                            margin-bottom: 13px;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

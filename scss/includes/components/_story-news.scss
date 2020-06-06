@@ -1,22 +1,30 @@
 .story-style-news {
 
-    margin-top: 2rem;
+    margin: 2rem 0;
 
     .news-wrapper {
 
         display: flex;
+        flex-wrap: wrap;
 
-        .col-25:first-child {
+        .col:first-child {
             padding-left: 0;
         }
-        .col-25:last-child {
+        .col:last-child {
             padding-right: 0;
         }
 
-        .col-25 {
+        .col {
 
             width: 25%;
             padding: .4rem;
+
+            @media screen and (max-width: 1200px) and (min-width: 768px) {
+                width: 50%;
+            }
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
 
             article {
 
